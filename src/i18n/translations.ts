@@ -1,0 +1,43 @@
+export const translations = {
+  es: {
+    nav_home: 'Inicio',
+    nav_projects: 'Proyectos',
+    nav_about: 'Sobre Mí',
+    nav_contact: 'Contacto',
+    home_view_project: 'Ver caso de estudio',
+    home_contact_title: 'Hablemos',
+    home_contact_subtitle: '¿Tenés un proyecto o una propuesta en mente? Escribime o conectemos en redes.',
+    home_email_copied: '¡Email copiado al portapapeles!',
+    home_copy_email: 'Copiar dirección de email',
+    project_back_home: '← Volver al inicio',
+    project_role: 'Mi Rol',
+    project_date: 'Fechas',
+    project_tools: 'Herramientas',
+    project_story: 'Sobre el Proyecto',
+    aria_toggle_theme: 'Alternar tema claro u oscuro',
+    aria_toggle_lang: 'Alternar idioma (Español / Inglés)',
+    lang_label: 'EN',
+  },
+  en: {
+    nav_home: 'Home',
+    nav_projects: 'Projects',
+    nav_about: 'About Me',
+    nav_contact: 'Contact',
+    home_view_project: 'View case study',
+    home_contact_title: 'Let\'s connect',
+    home_contact_subtitle: 'Do you have a project or a proposal in mind? Email me or connect on social media.',
+    home_email_copied: 'Email copied to clipboard!',
+    home_copy_email: 'Copy email address',
+    project_back_home: '← Back to home',
+    project_role: 'My Role',
+    project_date: 'Dates',
+    project_tools: 'Tools & Tech',
+    project_story: 'About the Project',
+    aria_toggle_theme: 'Toggle light or dark theme',
+    aria_toggle_lang: 'Toggle language (Spanish / English)',
+    lang_label: 'ES',
+  },
+} as const;
+
+export type Language = keyof typeof translations;
+export type TranslationKey = keyof typeof translations.es;

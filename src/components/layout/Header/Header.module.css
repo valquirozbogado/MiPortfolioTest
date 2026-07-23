@@ -1,0 +1,66 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: background-color var(--duration-normal) ease;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.logo {
+  font-family: var(--font-headline);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  letter-spacing: -0.5px;
+}
+
+.logoSpan {
+  color: var(--color-brand);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  color: var(--color-on-surface-variant);
+  border: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface);
+  transition: all var(--duration-fast) ease;
+}
+
+.btn:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+  background-color: var(--color-surface-low);
+  transform: translateY(-1px);
+}
+
+.btnActive {
+  font-weight: 600;
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.langText {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.5px;
+}
