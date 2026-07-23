@@ -5,8 +5,8 @@ import { getBio, getProjects, getContact } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProfileAvatar } from '../components/ProfileAvatar';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { Copy, Check } from 'lucide-react';
-import { FaLinkedin } from 'react-icons/fa';
+import { Copy, Check, Phone } from 'lucide-react';
+import { FaLinkedin, FaBehance } from 'react-icons/fa';
 import styles from './Home.module.css';
 
 export const Home: React.FC = () => {
@@ -104,6 +104,26 @@ export const Home: React.FC = () => {
             >
               <FaLinkedin size={16} />
               LinkedIn
+            </a>
+
+            <a 
+              href={contact.behance} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.btnSecondary}
+            >
+              <FaBehance size={16} />
+              Behance
+            </a>
+
+            <a 
+              href={`https://wa.me/${contact.phone.replace('+', '')}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.btnSecondary}
+            >
+              <Phone size={16} />
+              WhatsApp
             </a>
           </div>
         </section>
