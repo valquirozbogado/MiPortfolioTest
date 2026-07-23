@@ -5,7 +5,8 @@ import { getBio, getProjects, getContact } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProfileAvatar } from '../components/ProfileAvatar';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { Mail, Linkedin, ArrowRight, Copy, Check } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import styles from './Home.module.css';
 
 export const Home: React.FC = () => {
@@ -101,7 +102,7 @@ export const Home: React.FC = () => {
               rel="noopener noreferrer" 
               className={styles.btnSecondary}
             >
-              <Linkedin size={16} />
+              <FaLinkedin size={16} />
               LinkedIn
             </a>
           </div>

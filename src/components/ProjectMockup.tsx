@@ -5,7 +5,7 @@ interface ProjectMockupProps {
   height?: number;
 }
 
-export const ProjectMockup: React.FC<ProjectMockupProps> = ({ projectId, height = 240 }) => {
+export const ProjectMockup: React.FC<ProjectMockupProps> = ({ projectId: _projectId, height = 240 }) => {
   // If we have other projects in the future, we can add branches.
   // For now, let's build a beautiful abstract cardiology/medical UI campaign design.
   return (
