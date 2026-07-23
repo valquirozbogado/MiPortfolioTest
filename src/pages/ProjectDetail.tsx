@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { getProjectById } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { ArrowLeft, Briefcase, Calendar, Wrench } from 'lucide-react';
+import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X } from 'lucide-react';
 import styles from './ProjectDetail.module.css';
 
 export const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useApp();
+  const [activeImage, setActiveImage] = useState<string | null>(null);
   
   const project = id ? getProjectById(id, language) : undefined;
 
@@ -42,7 +43,7 @@ export const ProjectDetail: React.FC = () => {
         
         {/* Large Mockup Visualization */}
         <section className={styles.visualHero}>
-          <ProjectMockup projectId={project.id} height={320} imageUrl={project.image} />
+          <ProjectMockup projectId={project.id} height={360} imageUrl={project.image} />
         </section>
 
         {/* Header Info */}
@@ -82,6 +83,27 @@ export const ProjectDetail: React.FC = () => {
           </div>
         </section>
 
+        {/* Gallery Section */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className={styles.storySection}>
+            <h2 className={styles.sectionTitle}>{t('project_gallery')}</h2>
+            <div className={styles.galleryGrid}>
+              {project.gallery.map((image, index) => (
+                <div 
+                  key={index} 
+                  className={styles.galleryCard}
+                  onClick={() => setActiveImage(image)}
+                >
+                  <img src={image} alt={`${project.title} gallery page ${index + 1}`} className={styles.galleryImage} />
+                  <div className={styles.galleryHover}>
+                    <Eye size={24} color="#FFFFFF" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Tools Section */}
         <section className={styles.storySection}>
           <h2 className={styles.sectionTitle}>
@@ -99,6 +121,18 @@ export const ProjectDetail: React.FC = () => {
           </div>
         </section>
       </main>
+
+      {/* Lightbox Modal */}
+      {activeImage && (
+        <div className={styles.lightbox} onClick={() => setActiveImage(null)}>
+          <button className={styles.closeBtn} onClick={() => setActiveImage(null)}>
+            <X size={28} />
+          </button>
+          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+            <img src={activeImage} alt="Expanded view" className={styles.lightboxImage} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

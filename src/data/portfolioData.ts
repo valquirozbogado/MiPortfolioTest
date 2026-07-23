@@ -8,6 +8,7 @@ export interface Project {
   story: string[];
   tools: string[];
   image?: string;
+  gallery?: string[];
 }
 
 export interface Bio {
@@ -23,6 +24,47 @@ export interface ContactInfo {
   behance: string;
   phone: string;
 }
+
+const BOSH_GALLERY = [
+  '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
+  ...Array.from({ length: 21 }, (_, i) => `/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_${i + 1}_842x596.png`)
+];
+
+const MASQUEVISUAL_GALLERY = [
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_1_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_2_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_3_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_4_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_5_1400x1050.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_6_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_7_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_8_1400x1050.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_9_1400x1050.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_10_1400x787.png',
+  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_11_1400x1050.png'
+];
+
+const JUEGOSOLIMPICOS_GALLERY = Array.from(
+  { length: 8 },
+  (_, i) => `/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_${i}_1400x666.png`
+);
+
+const FESTIVALCINE_GALLERY = [
+  '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
+  ...Array.from({ length: 21 }, (_, i) => `/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_${i + 1}_1400x450.png`)
+];
+
+const EXPORURAL_GALLERY = [
+  '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
+  '/projects/expo_rural_chaco_2022____behance_pdf_img_1_1400x933.png',
+  '/projects/expo_rural_chaco_2022____behance_pdf_img_2_1400x1400.png'
+];
+
+const TATUBOLITA_GALLERY = Array.from(
+  { length: 4 },
+  (_, i) => `/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_${i}_1400x990.png`
+);
 
 const BIO_ES: Bio = {
   name: 'Valeria Quiroz Bogado',
@@ -69,7 +111,9 @@ const PROJECTS_ES: Project[] = [
       'Diseñé piezas de papelería institucional, incluyendo hojas membretadas, carpetas A4 y gafetes de acreditación.',
       'Creé la estrategia de redes sociales con plantillas de Instagram stories, banners promocionales y merchandising como remeras y packaging ecológico.'
     ],
-    tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising']
+    tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising'],
+    image: '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
+    gallery: BOSH_GALLERY
   },
   {
     id: 'masquevisual',
@@ -81,7 +125,9 @@ const PROJECTS_ES: Project[] = [
       'Diseñé y prototipé interfaces adaptativas (UX/UI) enfocadas en garantizar la legibilidad y el correcto uso tipográfico.',
       'Desarrollé piezas de comunicación con una estética moderna para destacar la importancia de un diseño inclusivo.'
     ],
-    tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Campaña Social']
+    tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Campaña Social'],
+    image: '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
+    gallery: MASQUEVISUAL_GALLERY
   },
   {
     id: 'juegosolimpicos',
@@ -93,7 +139,9 @@ const PROJECTS_ES: Project[] = [
       'Estructuré la jerarquía visual de información compleja combinando sistemas de tipografía avanzada.',
       'Optimicé la interfaz para asegurar una navegación intuitiva y una correcta adaptabilidad para pantallas móviles.'
     ],
-    tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design']
+    tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
+    image: '/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_0_1400x666.png',
+    gallery: JUEGOSOLIMPICOS_GALLERY
   },
   {
     id: 'festivalcine',
@@ -105,7 +153,37 @@ const PROJECTS_ES: Project[] = [
       'Trabajé en la composición tipográfica de alto impacto visual y el uso de retículas para la legibilidad de contenidos densos.',
       'Experimenté con jerarquías y contrastes cromáticos en color amarillo y negro para generar una estética cinematográfica potente.'
     ],
-    tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography']
+    tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography'],
+    image: '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
+    gallery: FESTIVALCINE_GALLERY
+  },
+  {
+    id: 'exporural',
+    title: 'Expo Rural Chaco 2022',
+    role: 'Diseñadora Gráfica',
+    date: '2022',
+    story: [
+      'Diseñé la identidad visual y piezas de comunicación para la Expo Rural Chaco 2022.',
+      'Desarrollé la señalética y cartelería del evento promoviendo la claridad de la información.',
+      'Creé el branding y piezas publicitarias impresas y digitales para redes sociales.'
+    ],
+    tools: ['Illustrator', 'Photoshop', 'Branding', 'Signage', 'Social Media'],
+    image: '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
+    gallery: EXPORURAL_GALLERY
+  },
+  {
+    id: 'tatubolita',
+    title: 'Tatú Bolita — Morfología',
+    role: 'Diseñadora Gráfica',
+    date: 'Proyecto Académico (UNNE)',
+    story: [
+      'Realicé un análisis morfológico detallado del tatú bolita para traducirlo en un sistema visual complejo.',
+      'Diseñé y construí piezas gráficas abstractas basadas en la morfología y textura de este animal.',
+      'Desarrollé una lámina de presentación técnica y composiciones tipográficas experimentales.'
+    ],
+    tools: ['Illustrator', 'Editorial Layout', 'Morfología', 'Sistemas Visuales'],
+    image: '/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_0_1400x990.png',
+    gallery: TATUBOLITA_GALLERY
   }
 ];
 
@@ -132,7 +210,9 @@ const PROJECTS_EN: Project[] = [
       'Designed institutional stationery items, including letterheads, A4 folders, and accreditation badges.',
       'Created a social media strategy with Instagram stories templates, promotional banners, and merchandising such as t-shirts and ecological packaging.'
     ],
-    tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising']
+    tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising'],
+    image: '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
+    gallery: BOSH_GALLERY
   },
   {
     id: 'masquevisual',
@@ -144,7 +224,9 @@ const PROJECTS_EN: Project[] = [
       'Designed and prototyped responsive interfaces (UX/UI) focusing on readability and proper typography usage.',
       'Developed modern promotional pieces to emphasize the importance of inclusive design.'
     ],
-    tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Social Campaign']
+    tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Social Campaign'],
+    image: '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
+    gallery: MASQUEVISUAL_GALLERY
   },
   {
     id: 'juegosolimpicos',
@@ -156,7 +238,9 @@ const PROJECTS_EN: Project[] = [
       'Structured the visual hierarchy of complex scheduling information using advanced typography systems.',
       'Optimized the interface for seamless navigation and proper mobile responsiveness.'
     ],
-    tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design']
+    tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
+    image: '/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_0_1400x666.png',
+    gallery: JUEGOSOLIMPICOS_GALLERY
   },
   {
     id: 'festivalcine',
@@ -168,7 +252,37 @@ const PROJECTS_EN: Project[] = [
       'Worked on high-impact typographic compositions and grid systems to ensure catalog readability.',
       'Experimented with hierarchies and color contrast in black and yellow to generate a strong cinematic identity.'
     ],
-    tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography']
+    tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography'],
+    image: '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
+    gallery: FESTIVALCINE_GALLERY
+  },
+  {
+    id: 'exporural',
+    title: 'Expo Rural Chaco 2022',
+    role: 'Graphic Designer',
+    date: '2022',
+    story: [
+      'Designed the visual identity and communication pieces for the Expo Rural Chaco 2022 event.',
+      'Developed event signage and posters to ensure clear informational hierarchy.',
+      'Created branding, print ads, and digital promotional assets for social media.'
+    ],
+    tools: ['Illustrator', 'Photoshop', 'Branding', 'Signage', 'Social Media'],
+    image: '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
+    gallery: EXPORURAL_GALLERY
+  },
+  {
+    id: 'tatubolita',
+    title: 'Tatú Bolita — Morphology',
+    role: 'Graphic Designer',
+    date: 'Academic Project (UNNE)',
+    story: [
+      'Performed a detailed morphological analysis of the "tatú bolita" (armadillo) to translate it into a complex visual system.',
+      'Designed and constructed abstract graphic pieces based on the animal\'s shape and textures.',
+      'Developed a technical presentation board and experimental typographic compositions.'
+    ],
+    tools: ['Illustrator', 'Editorial Layout', 'Morfología', 'Sistemas Visuales'],
+    image: '/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_0_1400x990.png',
+    gallery: TATUBOLITA_GALLERY
   }
 ];
 
