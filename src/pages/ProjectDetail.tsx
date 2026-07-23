@@ -42,7 +42,7 @@ export const ProjectDetail: React.FC = () => {
         
         {/* Large Mockup Visualization */}
         <section className={styles.visualHero}>
-          <ProjectMockup projectId={project.id} height={320} />
+          <ProjectMockup projectId={project.id} height={320} imageUrl={project.image} />
         </section>
 
         {/* Header Info */}

@@ -54,7 +54,7 @@ export const Home: React.FC = () => {
             {projects.map((proj) => (
               <Link key={proj.id} to={`/proyecto/${proj.id}`} className={styles.projectCard}>
                 <div className={styles.projectVisual}>
-                  <ProjectMockup projectId={proj.id} height={200} />
+                  <ProjectMockup projectId={proj.id} height={200} imageUrl={proj.image} />
                 </div>
                 
                 <div className={styles.projectHeader}>

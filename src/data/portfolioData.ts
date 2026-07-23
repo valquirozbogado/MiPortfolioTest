@@ -7,6 +7,7 @@ export interface Project {
   date: string;
   story: string[];
   tools: string[];
+  image?: string;
 }
 
 export interface Bio {

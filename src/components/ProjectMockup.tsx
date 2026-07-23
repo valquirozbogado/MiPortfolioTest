@@ -3,10 +3,20 @@ import React from 'react';
 interface ProjectMockupProps {
   projectId: string;
   height?: number;
+  imageUrl?: string;
 }
 
-export const ProjectMockup: React.FC<ProjectMockupProps> = ({ projectId, height = 240 }) => {
+export const ProjectMockup: React.FC<ProjectMockupProps> = ({ projectId, height = 240, imageUrl }) => {
   const renderMockup = () => {
+    if (imageUrl) {
+      return (
+        <img 
+          src={imageUrl} 
+          alt={`Mockup for ${projectId}`} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+        />
+      );
+    }
     switch (projectId) {
       case 'boshu':
         return (
