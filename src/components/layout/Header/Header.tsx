@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <div className={styles.logo}>
-          Valeria<span className={styles.logoSpan}>.Q</span>
+          Valeria <span className={styles.logoSpan}>Quiroz Bogado</span>
         </div>
         
         <div className={styles.controls}>
