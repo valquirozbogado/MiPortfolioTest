@@ -26,45 +26,94 @@ export interface ContactInfo {
 }
 
 const BOSH_GALLERY = [
-  '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
-  ...Array.from({ length: 21 }, (_, i) => `/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_${i + 1}_842x596.png`)
+  "/projects/boshu/img5.jpg",
+  "/projects/boshu/img7.jpg",
+  "/projects/boshu/img11.jpg",
+  "/projects/boshu/img12.jpg",
+  "/projects/boshu/img17.jpg",
+  "/projects/boshu/img18.jpg",
+  "/projects/boshu/img23.jpg",
+  "/projects/boshu/img24.jpg",
+  "/projects/boshu/img29.jpg",
+  "/projects/boshu/img30.jpg",
+  "/projects/boshu/img35.jpg",
+  "/projects/boshu/img36.jpg",
+  "/projects/boshu/img41.jpg",
+  "/projects/boshu/img42.jpg",
+  "/projects/boshu/img47.jpg",
+  "/projects/boshu/img48.jpg",
+  "/projects/boshu/img53.jpg",
+  "/projects/boshu/img54.jpg",
+  "/projects/boshu/img59.jpg",
+  "/projects/boshu/img60.jpg",
+  "/projects/boshu/img65.jpg",
+  "/projects/boshu/img66.jpg"
 ];
 
 const MASQUEVISUAL_GALLERY = [
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_1_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_2_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_3_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_4_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_5_1400x1050.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_6_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_7_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_8_1400x1050.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_9_1400x1050.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_10_1400x787.png',
-  '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_11_1400x1050.png'
+  "/projects/masquevisual/img5.jpg",
+  "/projects/masquevisual/img7.jpg",
+  "/projects/masquevisual/img11.jpg",
+  "/projects/masquevisual/img12.jpg",
+  "/projects/masquevisual/img17.jpg",
+  "/projects/masquevisual/img18.jpg",
+  "/projects/masquevisual/img23.jpg",
+  "/projects/masquevisual/img27.jpg",
+  "/projects/masquevisual/img28.jpg",
+  "/projects/masquevisual/img33.jpg",
+  "/projects/masquevisual/img37.jpg",
+  "/projects/masquevisual/img38.jpg"
 ];
 
-const JUEGOSOLIMPICOS_GALLERY = Array.from(
-  { length: 8 },
-  (_, i) => `/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_${i}_1400x666.png`
-);
+const JUEGOSOLIMPICOS_GALLERY = [
+  "/projects/juegosolimpicos/img5.jpg",
+  "/projects/juegosolimpicos/img7.jpg",
+  "/projects/juegosolimpicos/img8.jpg",
+  "/projects/juegosolimpicos/img14.jpg",
+  "/projects/juegosolimpicos/img15.jpg",
+  "/projects/juegosolimpicos/img20.jpg",
+  "/projects/juegosolimpicos/img21.jpg",
+  "/projects/juegosolimpicos/img26.jpg",
+  "/projects/juegosolimpicos/img27.jpg"
+];
 
 const FESTIVALCINE_GALLERY = [
-  '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
-  ...Array.from({ length: 21 }, (_, i) => `/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_${i + 1}_1400x450.png`)
+  "/projects/festivalcine/img5.jpg",
+  "/projects/festivalcine/img7.jpg",
+  "/projects/festivalcine/img8.jpg",
+  "/projects/festivalcine/img14.jpg",
+  "/projects/festivalcine/img15.jpg",
+  "/projects/festivalcine/img16.jpg",
+  "/projects/festivalcine/img17.jpg",
+  "/projects/festivalcine/img23.jpg",
+  "/projects/festivalcine/img24.jpg",
+  "/projects/festivalcine/img25.jpg",
+  "/projects/festivalcine/img31.jpg",
+  "/projects/festivalcine/img32.jpg",
+  "/projects/festivalcine/img33.jpg",
+  "/projects/festivalcine/img39.jpg",
+  "/projects/festivalcine/img40.jpg",
+  "/projects/festivalcine/img41.jpg",
+  "/projects/festivalcine/img47.jpg",
+  "/projects/festivalcine/img48.jpg",
+  "/projects/festivalcine/img49.jpg",
+  "/projects/festivalcine/img55.jpg",
+  "/projects/festivalcine/img56.jpg",
+  "/projects/festivalcine/img57.jpg"
 ];
 
 const EXPORURAL_GALLERY = [
-  '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
-  '/projects/expo_rural_chaco_2022____behance_pdf_img_1_1400x933.png',
-  '/projects/expo_rural_chaco_2022____behance_pdf_img_2_1400x1400.png'
+  "/projects/exporural/img5.jpg",
+  "/projects/exporural/img7.jpg",
+  "/projects/exporural/img11.jpg"
 ];
 
-const TATUBOLITA_GALLERY = Array.from(
-  { length: 4 },
-  (_, i) => `/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_${i}_1400x990.png`
-);
+const TATUBOLITA_GALLERY = [
+  "/projects/tatubolita/img5.jpg",
+  "/projects/tatubolita/img7.jpg",
+  "/projects/tatubolita/img19.jpg",
+  "/projects/tatubolita/img25.jpg"
+];
 
 const BIO_ES: Bio = {
   name: 'Valeria Quiroz Bogado',
@@ -112,7 +161,7 @@ const PROJECTS_ES: Project[] = [
       'Creé la estrategia de redes sociales con plantillas de Instagram stories, banners promocionales y merchandising como remeras y packaging ecológico.'
     ],
     tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising'],
-    image: '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
+    image: '/projects/boshu/img5.jpg',
     gallery: BOSH_GALLERY
   },
   {
@@ -126,7 +175,7 @@ const PROJECTS_ES: Project[] = [
       'Desarrollé piezas de comunicación con una estética moderna para destacar la importancia de un diseño inclusivo.'
     ],
     tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Campaña Social'],
-    image: '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
+    image: '/projects/masquevisual/img5.jpg',
     gallery: MASQUEVISUAL_GALLERY
   },
   {
@@ -140,7 +189,7 @@ const PROJECTS_ES: Project[] = [
       'Optimicé la interfaz para asegurar una navegación intuitiva y una correcta adaptabilidad para pantallas móviles.'
     ],
     tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
-    image: '/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_0_1400x666.png',
+    image: '/projects/juegosolimpicos/img5.jpg',
     gallery: JUEGOSOLIMPICOS_GALLERY
   },
   {
@@ -154,7 +203,7 @@ const PROJECTS_ES: Project[] = [
       'Experimenté con jerarquías y contrastes cromáticos en color amarillo y negro para generar una estética cinematográfica potente.'
     ],
     tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography'],
-    image: '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
+    image: '/projects/festivalcine/img5.jpg',
     gallery: FESTIVALCINE_GALLERY
   },
   {
@@ -168,7 +217,7 @@ const PROJECTS_ES: Project[] = [
       'Creé el branding y piezas publicitarias impresas y digitales para redes sociales.'
     ],
     tools: ['Illustrator', 'Photoshop', 'Branding', 'Signage', 'Social Media'],
-    image: '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
+    image: '/projects/exporural/img5.jpg',
     gallery: EXPORURAL_GALLERY
   },
   {
@@ -182,7 +231,7 @@ const PROJECTS_ES: Project[] = [
       'Desarrollé una lámina de presentación técnica y composiciones tipográficas experimentales.'
     ],
     tools: ['Illustrator', 'Editorial Layout', 'Morfología', 'Sistemas Visuales'],
-    image: '/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_0_1400x990.png',
+    image: '/projects/tatubolita/img5.jpg',
     gallery: TATUBOLITA_GALLERY
   }
 ];
@@ -211,7 +260,7 @@ const PROJECTS_EN: Project[] = [
       'Created a social media strategy with Instagram stories templates, promotional banners, and merchandising such as t-shirts and ecological packaging.'
     ],
     tools: ['Illustrator', 'Photoshop', 'Branding', 'Naming', 'Editorial Layout', 'Merchandising'],
-    image: '/projects/bosh____proyecto_taller_2_dg_unne____behance_pdf_img_0_1200x849.png',
+    image: '/projects/boshu/img5.jpg',
     gallery: BOSH_GALLERY
   },
   {
@@ -225,7 +274,7 @@ const PROJECTS_EN: Project[] = [
       'Developed modern promotional pieces to emphasize the importance of inclusive design.'
     ],
     tools: ['Figma', 'Illustrator', 'UX/UI Design', 'Accessibility', 'Social Campaign'],
-    image: '/projects/__que_visual___proyecto_final_de_carrera_dg_unne____behance_pdf_img_0_1400x787.png',
+    image: '/projects/masquevisual/img5.jpg',
     gallery: MASQUEVISUAL_GALLERY
   },
   {
@@ -239,7 +288,7 @@ const PROJECTS_EN: Project[] = [
       'Optimized the interface for seamless navigation and proper mobile responsiveness.'
     ],
     tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
-    image: '/projects/_juegos_ol_mpicos_de_la_juventud____tipograf_a_2_unne____behance_pdf_img_0_1400x666.png',
+    image: '/projects/juegosolimpicos/img5.jpg',
     gallery: JUEGOSOLIMPICOS_GALLERY
   },
   {
@@ -253,7 +302,7 @@ const PROJECTS_EN: Project[] = [
       'Experimented with hierarchies and color contrast in black and yellow to generate a strong cinematic identity.'
     ],
     tools: ['Illustrator', 'InDesign', 'Editorial Design', 'Grid System', 'Typography'],
-    image: '/projects/_festival_de_cine_de_ficci_n____tipograf_a_unne_2021____behance_pdf_img_0_1400x442.png',
+    image: '/projects/festivalcine/img5.jpg',
     gallery: FESTIVALCINE_GALLERY
   },
   {
@@ -267,7 +316,7 @@ const PROJECTS_EN: Project[] = [
       'Created branding, print ads, and digital promotional assets for social media.'
     ],
     tools: ['Illustrator', 'Photoshop', 'Branding', 'Signage', 'Social Media'],
-    image: '/projects/expo_rural_chaco_2022____behance_pdf_img_0_1400x933.png',
+    image: '/projects/exporural/img5.jpg',
     gallery: EXPORURAL_GALLERY
   },
   {
@@ -281,7 +330,7 @@ const PROJECTS_EN: Project[] = [
       'Developed a technical presentation board and experimental typographic compositions.'
     ],
     tools: ['Illustrator', 'Editorial Layout', 'Morfología', 'Sistemas Visuales'],
-    image: '/projects/tat__bolita___morfolog_a_dg_unne____behance_pdf_img_0_1400x990.png',
+    image: '/projects/tatubolita/img5.jpg',
     gallery: TATUBOLITA_GALLERY
   }
 ];
