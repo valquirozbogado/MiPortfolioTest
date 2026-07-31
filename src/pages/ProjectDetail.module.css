@@ -232,3 +232,34 @@
   to { transform: scale(1); opacity: 1; }
 }
 
+.linksGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.projectLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-outline);
+  color: var(--color-on-surface);
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: var(--weight-medium);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-surface-low);
+  transition: all var(--duration-fast) ease;
+  cursor: pointer;
+}
+
+.projectLinkBtn:hover {
+  background-color: var(--color-surface-high);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+

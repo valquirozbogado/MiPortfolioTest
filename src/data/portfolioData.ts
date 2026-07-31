@@ -9,6 +9,8 @@ export interface Project {
   tools: string[];
   image?: string;
   gallery?: string[];
+  galleryGroups?: { name: string; images: string[] }[];
+  links?: { label: string; url: string }[];
 }
 
 export interface Bio {
@@ -115,6 +117,7 @@ const TATUBOLITA_GALLERY = [
   "/projects/tatubolita/img25.jpg"
 ];
 
+
 const BIO_ES: Bio = {
   name: 'Valeria Quiroz Bogado',
   title: 'Diseñadora Gráfica | UX/UI',
@@ -148,7 +151,92 @@ const PROJECTS_ES: Project[] = [
       'Desarrollé piezas para campañas, eventos y comunicación interna.',
       'Produje material gráfico impreso y señalética manteniendo la identidad visual.'
     ],
-    tools: ['Suite Adobe', 'CapCut', 'Canva', 'Figma', 'Notion', 'Trello', 'Word', 'Excel', 'PowerPoint', 'Google Ads', 'Meta Ads']
+    tools: ['Suite Adobe', 'CapCut', 'Canva', 'Figma', 'Notion', 'Trello', 'Word', 'Excel', 'PowerPoint', 'Google Ads', 'Meta Ads'],
+    image: '/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/01.png',
+    galleryGroups: [
+      {
+        name: 'Posteos: Cardiopatías Congénitas',
+        images: [
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/01.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/02.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/03.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/04.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/05.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/06.png"
+        ]
+      },
+      {
+        name: 'Posteos: Seguridad del Paciente',
+        images: [
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/01.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/02.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/03.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/04.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/05.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/06.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/07.png"
+        ]
+      },
+      {
+        name: 'Posteos: Alimentos Seguros',
+        images: [
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/01.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/02.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/03.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/04.png"
+        ]
+      },
+      {
+        name: 'Historias de Instagram',
+        images: [
+          "/projects/cardiologia/historias de instagram/01.png",
+          "/projects/cardiologia/historias de instagram/02.png",
+          "/projects/cardiologia/historias de instagram/03.png",
+          "/projects/cardiologia/historias de instagram/04.png",
+          "/projects/cardiologia/historias de instagram/05.png",
+          "/projects/cardiologia/historias de instagram/06.png",
+          "/projects/cardiologia/historias de instagram/07.png"
+        ]
+      },
+      {
+        name: 'Folleto: Adulto Mayor',
+        images: [
+          "/projects/cardiologia/folletos/accidentes-domesticos-en-el-adulto-mayor/accidentes domesticos (en el adulto mayor)_page-0001.jpg",
+          "/projects/cardiologia/folletos/accidentes-domesticos-en-el-adulto-mayor/accidentes domesticos (en el adulto mayor)_page-0002.jpg"
+        ]
+      },
+      {
+        name: 'Folleto: Lavado de Manos',
+        images: [
+          "/projects/cardiologia/folletos/lavado-de-manos---folleto/lavado de manos - folleto_page-0001.jpg",
+          "/projects/cardiologia/folletos/lavado-de-manos---folleto/lavado de manos - folleto_page-0002.jpg"
+        ]
+      },
+      {
+        name: 'PBS: Posteos',
+        images: [
+          "/projects/cardiologia/pbs/posteos de instagram/pbs dia de la madre pbs.png",
+          "/projects/cardiologia/pbs/posteos de instagram/pbs dia del padre_Mesa de trabajo 1 copia 3.png"
+        ]
+      },
+      {
+        name: 'PBS: Promo PBS + Tuya',
+        images: [
+          "/projects/cardiologia/pbs/promo pbs + tuya/afiche tuya+pbs-11.png",
+          "/projects/cardiologia/pbs/promo pbs + tuya/promo pbs+tuya (historia ig)_Mesa de trabajo 1.png",
+          "/projects/cardiologia/pbs/promo pbs + tuya/promo pbs+tuya (posteo feed)_Mesa de trabajo 1.png"
+        ]
+      }
+    ],
+    links: [
+      { label: 'Post 4: Campaña en Instagram', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1' },
+      { label: 'Post 3: Información de Salud', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1' },
+      { label: 'Post 2: Consejos y Prevención', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1' },
+      { label: 'Post 1: Novedades del Instituto', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/' },
+      { label: 'Reel 3: Video Informativo', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/' },
+      { label: 'Reel 2: Video de Campaña', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/' },
+      { label: 'Reel 1: Resumen o Evento', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/' }
+    ]
   },
   {
     id: 'boshu',
@@ -247,7 +335,92 @@ const PROJECTS_EN: Project[] = [
       'Developed design pieces for campaigns, events, and internal communications.',
       'Produced printed graphic materials and signage while maintaining visual identity.'
     ],
-    tools: ['Adobe Creative Suite', 'CapCut', 'Canva', 'Figma', 'Notion', 'Trello', 'Microsoft Office (Word, Excel, PowerPoint)', 'Google Ads', 'Meta Ads']
+    tools: ['Adobe Creative Suite', 'CapCut', 'Canva', 'Figma', 'Notion', 'Trello', 'Microsoft Office (Word, Excel, PowerPoint)', 'Google Ads', 'Meta Ads'],
+    image: '/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/01.png',
+    galleryGroups: [
+      {
+        name: 'Posts: Congenital Heart Defects',
+        images: [
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/01.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/02.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/03.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/04.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/05.png",
+          "/projects/cardiologia/posteos de instagram/día de las cardiopatías congénitas/06.png"
+        ]
+      },
+      {
+        name: 'Posts: Patient Safety',
+        images: [
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/01.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/02.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/03.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/04.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/05.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/06.png",
+          "/projects/cardiologia/posteos de instagram/día de la seguridad del paciente/07.png"
+        ]
+      },
+      {
+        name: 'Posts: Safe Food & Water',
+        images: [
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/01.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/02.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/03.png",
+          "/projects/cardiologia/posteos de instagram/consumir agua y alimentos de manera segura/04.png"
+        ]
+      },
+      {
+        name: 'Instagram Stories',
+        images: [
+          "/projects/cardiologia/historias de instagram/01.png",
+          "/projects/cardiologia/historias de instagram/02.png",
+          "/projects/cardiologia/historias de instagram/03.png",
+          "/projects/cardiologia/historias de instagram/04.png",
+          "/projects/cardiologia/historias de instagram/05.png",
+          "/projects/cardiologia/historias de instagram/06.png",
+          "/projects/cardiologia/historias de instagram/07.png"
+        ]
+      },
+      {
+        name: 'Brochure: Elderly Care',
+        images: [
+          "/projects/cardiologia/folletos/accidentes-domesticos-en-el-adulto-mayor/accidentes domesticos (en el adulto mayor)_page-0001.jpg",
+          "/projects/cardiologia/folletos/accidentes-domesticos-en-el-adulto-mayor/accidentes domesticos (en el adulto mayor)_page-0002.jpg"
+        ]
+      },
+      {
+        name: 'Brochure: Hand Washing',
+        images: [
+          "/projects/cardiologia/folletos/lavado-de-manos---folleto/lavado de manos - folleto_page-0001.jpg",
+          "/projects/cardiologia/folletos/lavado-de-manos---folleto/lavado de manos - folleto_page-0002.jpg"
+        ]
+      },
+      {
+        name: 'PBS: Posts',
+        images: [
+          "/projects/cardiologia/pbs/posteos de instagram/pbs dia de la madre pbs.png",
+          "/projects/cardiologia/pbs/posteos de instagram/pbs dia del padre_Mesa de trabajo 1 copia 3.png"
+        ]
+      },
+      {
+        name: 'PBS: Promo PBS + Tuya',
+        images: [
+          "/projects/cardiologia/pbs/promo pbs + tuya/afiche tuya+pbs-11.png",
+          "/projects/cardiologia/pbs/promo pbs + tuya/promo pbs+tuya (historia ig)_Mesa de trabajo 1.png",
+          "/projects/cardiologia/pbs/promo pbs + tuya/promo pbs+tuya (posteo feed)_Mesa de trabajo 1.png"
+        ]
+      }
+    ],
+    links: [
+      { label: 'Post 4: Instagram Campaign', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1' },
+      { label: 'Post 3: Health Information', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1' },
+      { label: 'Post 2: Tips & Prevention', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1' },
+      { label: 'Post 1: Institute News', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/' },
+      { label: 'Reel 3: Informational Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/' },
+      { label: 'Reel 2: Campaign Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/' },
+      { label: 'Reel 1: Summary or Event', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/' }
+    ]
   },
   {
     id: 'boshu',

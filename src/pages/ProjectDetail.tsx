@@ -4,8 +4,26 @@ import { useApp } from '../context/AppContext';
 import { getProjectById } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X } from 'lucide-react';
+import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X, ExternalLink } from 'lucide-react';
 import styles from './ProjectDetail.module.css';
+
+const InstagramIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 
 export const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -99,6 +117,32 @@ export const ProjectDetail: React.FC = () => {
                     <Eye size={24} color="#FFFFFF" />
                   </div>
                 </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Project Links Section */}
+        {project.links && project.links.length > 0 && (
+          <section className={styles.storySection}>
+            <h2 className={styles.sectionTitle}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <InstagramIcon size={18} />
+                {t('project_links')}
+              </span>
+            </h2>
+            <div className={styles.linksGrid}>
+              {project.links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.projectLinkBtn}
+                >
+                  <span>{link.label}</span>
+                  <ExternalLink size={14} />
+                </a>
               ))}
             </div>
           </section>
