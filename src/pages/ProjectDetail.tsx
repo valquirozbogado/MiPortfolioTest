@@ -25,12 +25,26 @@ const InstagramIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
   </svg>
 );
 
+const GoogleSitesIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 15c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="#4285F4"/>
+    <path d="M3 5v4h8V3H5c-1.1 0-2 .9-2 2z" fill="#AECBFA"/>
+  </svg>
+);
+
 export const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useApp();
   const [activeImage, setActiveImage] = useState<string | null>(null);
   
   const project = id ? getProjectById(id, language) : undefined;
+  const isGoogleSites = project?.id === 'juegosolimpicos';
 
   if (!project) {
     return (
@@ -127,8 +141,8 @@ export const ProjectDetail: React.FC = () => {
           <section className={styles.storySection}>
             <h2 className={styles.sectionTitle}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                <InstagramIcon size={18} />
-                {t('project_links')}
+                {isGoogleSites ? <GoogleSitesIcon size={18} /> : <InstagramIcon size={18} />}
+                {isGoogleSites ? t('project_links_sites') : t('project_links')}
               </span>
             </h2>
             <div className={styles.linksGrid}>
@@ -151,7 +165,7 @@ export const ProjectDetail: React.FC = () => {
                         />
                       ) : (
                         <div className={styles.linkCardPlaceholder}>
-                          <InstagramIcon size={32} />
+                          {isGoogleSites ? <GoogleSitesIcon size={32} /> : <InstagramIcon size={32} />}
                         </div>
                       )}
                       
@@ -164,7 +178,7 @@ export const ProjectDetail: React.FC = () => {
                       )}
 
                       <div className={styles.instagramBadge}>
-                        <InstagramIcon size={18} />
+                        {isGoogleSites ? <GoogleSitesIcon size={18} /> : <InstagramIcon size={18} />}
                       </div>
                     </a>
                   </div>
