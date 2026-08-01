@@ -4,7 +4,7 @@ import { useApp } from '../context/AppContext';
 import { getProjectById } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X, Play } from 'lucide-react';
 import styles from './ProjectDetail.module.css';
 
 const InstagramIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
@@ -132,25 +132,44 @@ export const ProjectDetail: React.FC = () => {
               </span>
             </h2>
             <div className={styles.linksGrid}>
-              {project.links.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.projectLinkBtn} ${link.thumbnail ? styles.hasThumb : ''}`}
-                >
-                  {link.thumbnail && (
-                    <img
-                      src={link.thumbnail}
-                      alt=""
-                      className={styles.linkThumbnail}
-                    />
-                  )}
-                  <span>{link.label}</span>
-                  <ExternalLink size={14} />
-                </a>
-              ))}
+              {project.links.map((link, index) => {
+                const isReel = link.url.includes('/reel/');
+                return (
+                  <div key={index} className={styles.linkCard}>
+                    <p className={styles.linkCardLabel}>{link.label}</p>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.linkCardMediaWrapper}
+                    >
+                      {link.thumbnail ? (
+                        <img
+                          src={link.thumbnail}
+                          alt={link.label}
+                          className={styles.linkCardImage}
+                        />
+                      ) : (
+                        <div className={styles.linkCardPlaceholder}>
+                          <InstagramIcon size={32} />
+                        </div>
+                      )}
+                      
+                      {isReel && (
+                        <div className={styles.playButtonOverlay}>
+                          <div className={styles.playIconContainer}>
+                            <Play size={24} fill="currentColor" />
+                          </div>
+                        </div>
+                      )}
+
+                      <div className={styles.instagramBadge}>
+                        <InstagramIcon size={18} />
+                      </div>
+                    </a>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}

@@ -19,36 +19,18 @@ export const ProfileAvatar: React.FC<{ size?: number }> = ({ size = 120 }) => {
       }}
       className="profile-avatar"
     >
-      {/* Decorative background glow */}
-      <div 
+      <img
+        src="/icon photo.jpeg"
+        alt="Valeria Quiroz Bogado"
         style={{
-          position: 'absolute',
-          top: '-20%',
-          left: '-20%',
-          width: '140%',
-          height: '140%',
-          background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%)',
-          animation: 'pulse 4s infinite alternate',
-        }}
-      />
-      <span 
-        style={{
-          fontFamily: 'var(--font-headline)',
-          fontSize: `${size * 0.35}px`,
-          fontWeight: 700,
-          color: 'var(--color-on-brand)',
-          letterSpacing: '-1px',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
           zIndex: 1,
         }}
-      >
-        VQ
-      </span>
+      />
 
       <style>{`
-        @keyframes pulse {
-          0% { transform: scale(1); opacity: 0.6; }
-          100% { transform: scale(1.1); opacity: 0.9; }
-        }
         .profile-avatar:hover {
           transform: scale(1.05) rotate(2deg);
         }
