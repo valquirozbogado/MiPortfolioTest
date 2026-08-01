@@ -64,22 +64,6 @@ export const Home: React.FC = () => {
                   </div>
                   <div className={styles.projectDate}>{proj.date}</div>
                 </div>
-                
-                <div className={styles.projectSummary}>
-                  {proj.story.map((bullet, idx) => (
-                    <p key={idx}>• {bullet}</p>
-                  ))}
-                </div>
-
-
-                <div className={styles.tagList}>
-                  {proj.tools.slice(0, 5).map((tool, idx) => (
-                    <span key={idx} className={styles.tag}>{tool}</span>
-                  ))}
-                  {proj.tools.length > 5 && (
-                    <span className={styles.tag}>+{proj.tools.length - 5}</span>
-                  )}
-                </div>
               </Link>
             ))}
           </div>
