@@ -18,6 +18,42 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ projectId, height 
       );
     }
     switch (projectId) {
+      case 'esteportfolio':
+        return (
+          <svg width="100%" height="100%" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="ep-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8B5CF6" />
+                <stop offset="100%" stopColor="#EC4899" />
+              </linearGradient>
+              <pattern id="ep-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--color-outline-variant)" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="var(--color-surface)" />
+            <rect width="100%" height="100%" fill="url(#ep-grid)" opacity="0.3" />
+            
+            {/* Ambient glows */}
+            <circle cx="200" cy="120" r="80" fill="url(#ep-grad)" opacity="0.15" filter="blur(20px)" />
+            
+            {/* Icon Circle */}
+            <circle cx="200" cy="120" r="50" fill="var(--color-surface-high)" stroke="url(#ep-grad)" strokeWidth="2.5" filter="drop-shadow(0 8px 16px rgba(139, 92, 246, 0.15))" />
+            
+            {/* Initials Text */}
+            <text 
+              x="200" 
+              y="131" 
+              textAnchor="middle" 
+              fill="url(#ep-grad)" 
+              fontFamily="var(--font-headline)" 
+              fontSize="34" 
+              fontWeight="bold" 
+              letterSpacing="1"
+            >
+              EP
+            </text>
+          </svg>
+        );
       case 'boshu':
         return (
           <svg width="100%" height="100%" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">

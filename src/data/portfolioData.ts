@@ -159,9 +159,7 @@ const PROJECTS_ES: Project[] = [
       '7. Despliegue continuo en Netlify.',
       'Insights clave: La documentación estructurada desde la terminal, el uso de mockups rápidos y un proceso bien definido son tan valiosos como el producto final.'
     ],
-    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding'],
-    image: '/projects/esteportfolio/cover.png',
-    gallery: ['/projects/esteportfolio/cover.png']
+    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding']
   },
   {
     id: 'cardiologia',
@@ -368,9 +366,7 @@ const PROJECTS_EN: Project[] = [
       '7. Continuous deployment on Netlify.',
       'Key Insights: Structured documentation from the CLI, quick mockups, and a well-defined workflow are as valuable as the final product.'
     ],
-    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding'],
-    image: '/projects/esteportfolio/cover.png',
-    gallery: ['/projects/esteportfolio/cover.png']
+    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding']
   },
   {
     id: 'cardiologia',
