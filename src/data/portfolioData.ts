@@ -278,7 +278,10 @@ const PROJECTS_ES: Project[] = [
     ],
     tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
     image: '/projects/juegosolimpicos/img5.jpg',
-    gallery: JUEGOSOLIMPICOS_GALLERY
+    gallery: JUEGOSOLIMPICOS_GALLERY,
+    links: [
+      { label: 'Sitio Web del Proyecto', url: 'https://sites.google.com/view/quiroz-bogado-valeria08joj?usp=sharing', thumbnail: '/projects/juegosolimpicos/links/joj_site.png' }
+    ]
   },
   {
     id: 'festivalcine',
@@ -462,7 +465,10 @@ const PROJECTS_EN: Project[] = [
     ],
     tools: ['Figma', 'UX/UI Design', 'Typography System', 'Responsive Design'],
     image: '/projects/juegosolimpicos/img5.jpg',
-    gallery: JUEGOSOLIMPICOS_GALLERY
+    gallery: JUEGOSOLIMPICOS_GALLERY,
+    links: [
+      { label: 'Project Website', url: 'https://sites.google.com/view/quiroz-bogado-valeria08joj?usp=sharing', thumbnail: '/projects/juegosolimpicos/links/joj_site.png' }
+    ]
   },
   {
     id: 'festivalcine',
