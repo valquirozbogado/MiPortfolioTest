@@ -142,6 +142,28 @@ const BIO_EN: Bio = {
 
 const PROJECTS_ES: Project[] = [
   {
+    id: 'esteportfolio',
+    title: 'Este Portfolio (Generación 3)',
+    role: 'Diseño UX/UI & Desarrolladora Frontend AI-Native',
+    date: 'Febrero - Marzo 2026 (En Desarrollo)',
+    story: [
+      'Portfolio profesional construido utilizando una metodología AI-native completa, abarcando desde la etapa de research hasta el deploy final.',
+      'Motivación: Aplicar la metodología evolucionada de desarrollo asistido por IA a un proyecto real que demuestre el proceso en sí mismo.',
+      'Workflow / Flujo de trabajo:',
+      '1. Research profundo y documentación local (NotebookLM + Perplexity).',
+      '2. Definición de PRD, Design System y Plan de Acción desde terminal (Claude Code).',
+      '3. Creación de referencias visuales y descripciones en markdown.',
+      '4. Mockups en ASCII para definir la estructura antes de la fase visual.',
+      '5. Implementación local con React 19, Vite y TypeScript.',
+      '6. Iteraciones locales rápidas antes de la publicación.',
+      '7. Despliegue continuo en Netlify.',
+      'Insights clave: La documentación estructurada desde la terminal, el uso de mockups rápidos y un proceso bien definido son tan valiosos como el producto final.'
+    ],
+    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding'],
+    image: '/projects/esteportfolio/cover.png',
+    gallery: ['/projects/esteportfolio/cover.png']
+  },
+  {
     id: 'cardiologia',
     title: 'Instituto de Cardiología de Corrientes',
     role: 'Diseñadora Gráfica',
@@ -328,6 +350,28 @@ const PROJECTS_ES: Project[] = [
 ];
 
 const PROJECTS_EN: Project[] = [
+  {
+    id: 'esteportfolio',
+    title: 'This Portfolio (Generation 3)',
+    role: 'UX/UI Design & AI-Native Frontend Developer',
+    date: 'February - March 2026 (In Development)',
+    story: [
+      'Professional portfolio built using a complete AI-native methodology, spanning from the research stage to final deployment.',
+      'Motivation: Applying the evolved AI-assisted development methodology to a real project that demonstrates the process itself.',
+      'Workflow:',
+      '1. Deep research and local documentation (NotebookLM + Perplexity).',
+      '2. Defining the PRD, Design System, and Action Plan from the terminal (Claude Code).',
+      '3. Visual references and markdown descriptions.',
+      '4. ASCII mockups to define structure before the visual design phase.',
+      '5. Local implementation with React 19, Vite, and TypeScript.',
+      '6. Quick local iterations before publishing.',
+      '7. Continuous deployment on Netlify.',
+      'Key Insights: Structured documentation from the CLI, quick mockups, and a well-defined workflow are as valuable as the final product.'
+    ],
+    tools: ['React 19', 'Vite', 'TypeScript', 'React Router', 'Netlify', 'AI-Assisted Coding'],
+    image: '/projects/esteportfolio/cover.png',
+    gallery: ['/projects/esteportfolio/cover.png']
+  },
   {
     id: 'cardiologia',
     title: 'Cardiology Institute of Corrientes',
