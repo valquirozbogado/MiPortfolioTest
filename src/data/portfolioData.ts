@@ -10,7 +10,7 @@ export interface Project {
   image?: string;
   gallery?: string[];
   galleryGroups?: { name: string; images: string[] }[];
-  links?: { label: string; url: string }[];
+  links?: { label: string; url: string; thumbnail?: string }[];
 }
 
 export interface Bio {
@@ -229,13 +229,13 @@ const PROJECTS_ES: Project[] = [
       }
     ],
     links: [
-      { label: 'Post 4: Campaña en Instagram', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1' },
-      { label: 'Post 3: Información de Salud', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1' },
-      { label: 'Post 2: Consejos y Prevención', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1' },
-      { label: 'Post 1: Novedades del Instituto', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/' },
-      { label: 'Reel 3: Video Informativo', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/' },
-      { label: 'Reel 2: Video de Campaña', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/' },
-      { label: 'Reel 1: Resumen o Evento', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/' }
+      { label: 'Post 4: Campaña en Instagram', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1', thumbnail: '/projects/cardiologia/links/post 4.jpg' },
+      { label: 'Post 3: Información de Salud', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1', thumbnail: '/projects/cardiologia/links/post 3.jpg' },
+      { label: 'Post 2: Consejos y Prevención', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1', thumbnail: '/projects/cardiologia/links/post 2.jpg' },
+      { label: 'Post 1: Novedades del Instituto', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/', thumbnail: '/projects/cardiologia/links/post 1.jpg' },
+      { label: 'Reel 3: Video Informativo', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/', thumbnail: '/projects/cardiologia/links/reel 3.jpeg' },
+      { label: 'Reel 2: Video de Campaña', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/', thumbnail: '/projects/cardiologia/links/reel 2.jpeg' },
+      { label: 'Reel 1: Resumen o Evento', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/', thumbnail: '/projects/cardiologia/links/reel 1.jpeg' }
     ]
   },
   {
@@ -413,13 +413,13 @@ const PROJECTS_EN: Project[] = [
       }
     ],
     links: [
-      { label: 'Post 4: Instagram Campaign', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1' },
-      { label: 'Post 3: Health Information', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1' },
-      { label: 'Post 2: Tips & Prevention', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1' },
-      { label: 'Post 1: Institute News', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/' },
-      { label: 'Reel 3: Informational Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/' },
-      { label: 'Reel 2: Campaign Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/' },
-      { label: 'Reel 1: Summary or Event', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/' }
+      { label: 'Post 4: Instagram Campaign', url: 'https://www.instagram.com/cardiologicoctes/p/DFu2wDUTQIa/?img_index=1', thumbnail: '/projects/cardiologia/links/post 4.jpg' },
+      { label: 'Post 3: Health Information', url: 'https://www.instagram.com/cardiologicoctes/p/DMaPNQuzFvI/?img_index=1', thumbnail: '/projects/cardiologia/links/post 3.jpg' },
+      { label: 'Post 2: Tips & Prevention', url: 'https://www.instagram.com/cardiologicoctes/p/DTQCy01D9we/?img_index=1', thumbnail: '/projects/cardiologia/links/post 2.jpg' },
+      { label: 'Post 1: Institute News', url: 'https://www.instagram.com/cardiologicoctes/p/DUGO3q6kRGb/', thumbnail: '/projects/cardiologia/links/post 1.jpg' },
+      { label: 'Reel 3: Informational Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DMsNW-BRmM5/', thumbnail: '/projects/cardiologia/links/reel 3.jpeg' },
+      { label: 'Reel 2: Campaign Video', url: 'https://www.instagram.com/cardiologicoctes/reel/DPBfuzIAIMk/', thumbnail: '/projects/cardiologia/links/reel 2.jpeg' },
+      { label: 'Reel 1: Summary or Event', url: 'https://www.instagram.com/cardiologicoctes/reel/DTgZQIyEWq8/', thumbnail: '/projects/cardiologia/links/reel 1.jpeg' }
     ]
   },
   {

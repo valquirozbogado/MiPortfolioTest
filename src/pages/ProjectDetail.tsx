@@ -138,8 +138,15 @@ export const ProjectDetail: React.FC = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.projectLinkBtn}
+                  className={`${styles.projectLinkBtn} ${link.thumbnail ? styles.hasThumb : ''}`}
                 >
+                  {link.thumbnail && (
+                    <img
+                      src={link.thumbnail}
+                      alt=""
+                      className={styles.linkThumbnail}
+                    />
+                  )}
                   <span>{link.label}</span>
                   <ExternalLink size={14} />
                 </a>
