@@ -143,7 +143,7 @@ const BIO_EN: Bio = {
 const PROJECTS_ES: Project[] = [
   {
     id: 'esteportfolio',
-    title: 'Este Portfolio (Generación 3)',
+    title: 'Este Portfolio',
     role: 'Diseño UX/UI & Desarrolladora Frontend AI-Native',
     date: 'Febrero - Marzo 2026 (En Desarrollo)',
     story: [
@@ -352,7 +352,7 @@ const PROJECTS_ES: Project[] = [
 const PROJECTS_EN: Project[] = [
   {
     id: 'esteportfolio',
-    title: 'This Portfolio (Generation 3)',
+    title: 'This Portfolio',
     role: 'UX/UI Design & AI-Native Frontend Developer',
     date: 'February - March 2026 (In Development)',
     story: [
