@@ -4,7 +4,7 @@ import { useApp } from '../context/AppContext';
 import { getProjectById } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X, Play } from 'lucide-react';
+import { ArrowLeft, Briefcase, Calendar, Wrench, Eye, X, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './ProjectDetail.module.css';
 
 const InstagramIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
@@ -41,10 +41,39 @@ const GoogleSitesIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
 export const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useApp();
-  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   
   const project = id ? getProjectById(id, language) : undefined;
   const isGoogleSites = project?.id === 'juegosolimpicos';
+
+  const handlePrev = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (project?.gallery && activeIndex !== null) {
+      setActiveIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : project.gallery!.length - 1));
+    }
+  };
+
+  const handleNext = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (project?.gallery && activeIndex !== null) {
+      setActiveIndex((prev) => (prev !== null && prev < project.gallery!.length - 1 ? prev + 1 : 0));
+    }
+  };
+
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (activeIndex === null) return;
+      if (e.key === 'ArrowLeft') {
+        handlePrev();
+      } else if (e.key === 'ArrowRight') {
+        handleNext();
+      } else if (e.key === 'Escape') {
+        setActiveIndex(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeIndex, project?.gallery]);
 
   if (!project) {
     return (
@@ -124,7 +153,7 @@ export const ProjectDetail: React.FC = () => {
                 <div 
                   key={index} 
                   className={styles.galleryCard}
-                  onClick={() => setActiveImage(image)}
+                  onClick={() => setActiveIndex(index)}
                 >
                   <img src={image} alt={`${project.title} gallery page ${index + 1}`} className={styles.galleryImage} />
                   <div className={styles.galleryHover}>
@@ -207,13 +236,47 @@ export const ProjectDetail: React.FC = () => {
       </main>
 
       {/* Lightbox Modal */}
-      {activeImage && (
-        <div className={styles.lightbox} onClick={() => setActiveImage(null)}>
-          <button className={styles.closeBtn} onClick={() => setActiveImage(null)}>
+      {activeIndex !== null && project.gallery && project.gallery[activeIndex] && (
+        <div className={styles.lightbox} onClick={() => setActiveIndex(null)}>
+          <button 
+            className={styles.closeBtn} 
+            onClick={() => setActiveIndex(null)}
+            aria-label="Close"
+          >
             <X size={28} />
           </button>
+          
+          <button 
+            className={`${styles.navBtn} ${styles.prevBtn}`} 
+            onClick={handlePrev}
+            aria-label={t('gallery_nav_prev')}
+          >
+            <ChevronLeft size={36} />
+          </button>
+
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <img src={activeImage} alt="Expanded view" className={styles.lightboxImage} />
+            <img 
+              src={project.gallery[activeIndex]} 
+              alt={`${project.title} gallery page ${activeIndex + 1}`} 
+              className={styles.lightboxImage} 
+            />
+          </div>
+
+          <button 
+            className={`${styles.navBtn} ${styles.nextBtn}`} 
+            onClick={handleNext}
+            aria-label={t('gallery_nav_next')}
+          >
+            <ChevronRight size={36} />
+          </button>
+
+          <div className={styles.lightboxFooter} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.imageCounter}>
+              {activeIndex + 1} / {project.gallery.length}
+            </div>
+            <div className={styles.navHint}>
+              {t('gallery_nav_hint')}
+            </div>
           </div>
         </div>
       )}
