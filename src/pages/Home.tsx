@@ -5,7 +5,7 @@ import { getBio, getProjects, getContact } from '../data/portfolioData';
 import { Header } from '../components/layout/Header/Header';
 import { ProfileAvatar } from '../components/ProfileAvatar';
 import { ProjectMockup } from '../components/ProjectMockup';
-import { Copy, Check, Phone } from 'lucide-react';
+import { Copy, Check, Phone, Briefcase } from 'lucide-react';
 import { FaLinkedin, FaBehance } from 'react-icons/fa';
 import styles from './Home.module.css';
 
@@ -98,6 +98,16 @@ export const Home: React.FC = () => {
             >
               <FaBehance size={16} />
               Behance
+            </a>
+
+            <a 
+              href={contact.getonbrd} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.btnSecondary}
+            >
+              <Briefcase size={16} />
+              Get on Board
             </a>
 
             <a 

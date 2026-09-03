@@ -14,7 +14,7 @@
 
 ## 2. Contact & links
 - Public email: quirozbogadoval@gmail.com
-- Social links: https://www.linkedin.com/in/valeriaquirozbogado/
+- Social links: https://www.linkedin.com/in/valeriaquirozbogado/ | https://www.getonbrd.com/p/valeria-itati-quiroz-bogado
 
 ## 3. Voice & audience
 - Tone: Profesional y sobrio

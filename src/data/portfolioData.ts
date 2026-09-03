@@ -25,6 +25,7 @@ export interface ContactInfo {
   linkedin: string;
   behance: string;
   phone: string;
+  getonbrd: string;
 }
 
 const BOSH_GALLERY = [
@@ -558,7 +559,8 @@ const CONTACT: ContactInfo = {
   email: 'quirozbogadoval@gmail.com',
   linkedin: 'https://www.linkedin.com/in/valeriaquirozbogado/',
   behance: 'https://www.behance.net/valeriaquirozbogado',
-  phone: '+543625144739'
+  phone: '+543625144739',
+  getonbrd: 'https://www.getonbrd.com/p/valeria-itati-quiroz-bogado'
 };
 
 export function getBio(lang: Language): Bio {

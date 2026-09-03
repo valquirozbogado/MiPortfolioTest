@@ -49,6 +49,7 @@ Este archivo registra todo el contenido del portfolio y su estado de preparació
 |---|---|---|
 | **Public Email / Correo Público** | quirozbogadoval@gmail.com | [x] Approved / Aprobado |
 | **LinkedIn** | https://www.linkedin.com/in/valeriaquirozbogado/ | [x] Approved / Aprobado |
+| **Get on Board** | https://www.getonbrd.com/p/valeria-itati-quiroz-bogado | [x] Approved / Aprobado |
 
 ---
 
